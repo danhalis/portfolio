@@ -15,7 +15,7 @@ export default function Home() {
       overflow-scroll"
     >
       <Header />
-
+      <section className="h-1 snap-center" />
       <section id="hero" className="snap-center">
         <Hero />
       </section>

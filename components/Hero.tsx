@@ -3,6 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import HeroBackground from "./HeroBackground";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 function Hero() {
   const [text, count] = useTypewriter({
@@ -51,10 +52,17 @@ function Hero() {
           >
             Software Developer
           </h2>
-          <h1 className="text-center text-5xl lg:text-6xl font-semibold px-10">
+          <h1 className="text-center text-3xl lg:text-6xl font-semibold px-10">
             <span>{text}</span>
             <Cursor />
           </h1>
+          <Link href="#about">
+            <button
+              className="hero-btn"
+            >
+              About
+            </button>
+          </Link>
         </div>
       </motion.div>
     </div>

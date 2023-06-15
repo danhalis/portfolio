@@ -1,8 +1,9 @@
 import React, { useCallback } from "react";
 import { motion } from "framer-motion";
-import Particles from "react-particles";
+import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import opacityAnimation from "@/constants/animation/hero-background-opacity.json";
 
 function HeroBackground() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -133,8 +134,8 @@ function HeroBackground() {
           opacity: 0,
         }}
         animate={{
-          scale: [1, 2, 2, 3, 1],
-          opacity: [0.1, 0.2, 0.4, 0.8, 0.1, 1],
+          scale: 1,
+          opacity: opacityAnimation,
         }}
         transition={{
           duration: 2.5,
@@ -142,24 +143,16 @@ function HeroBackground() {
       >
         <div className="relative flex justify-center items-center">
           <div
-            className="absolute border border-[#3b6c79] rounded-full
-        h-[500px] w-[500px] mt-52 animate-ping"
+            className="absolute
+            border-x-4 border-[#333333]
+            rounded-full
+            h-[500px] w-[500px] mt-52 animate-pulse"
           />
           <div
-            className="absolute border border-[#333333] rounded-full
-        h-[300px] w-[300px] mt-52"
-          />
-          <div
-            className="absolute border border-[#fffb003c] rounded-full
-        h-[500px] w-[500px] mt-52 animate-pulse"
-          />
-          <div
-            className="absolute border-2 border-[#00c8ff73] rounded-full
-        h-[650px] w-[650px] mt-52 animate-pulse"
-          />
-          <div
-            className="absolute border border-[#333333] rounded-full
-        h-[800px] w-[800px] mt-52"
+            className="absolute
+            border-2 border-[#fffb003c] shadow-[0_0_50px_20px_rgba(255,251,0,0.24)]
+            rounded-full
+            h-[650px] w-[650px] mt-52 animate-pulse"
           />
         </div>
       </motion.div>

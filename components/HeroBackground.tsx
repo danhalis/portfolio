@@ -87,7 +87,7 @@ function HeroBackground() {
               type: "image",
               images: [
                 {
-                  src: "/code.png",
+                  src: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/code.png",
                   fill: true,
                 },
               ],

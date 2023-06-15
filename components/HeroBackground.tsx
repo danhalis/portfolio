@@ -20,7 +20,7 @@ function HeroBackground() {
   );
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full mt-1">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -36,7 +36,7 @@ function HeroBackground() {
                 enable: !isMobile,
                 area: 900,
             },
-              value: isMobile? 3 : 5,
+              value: isMobile? 4 : 5,
             },
             shadow: {
               enable: true,
@@ -44,7 +44,7 @@ function HeroBackground() {
               blur: 30,
             },
             shape: {
-              type: isMobile? "image" : ["circle", "image"],
+              type: ["circle", "image"],
               images: [
                 {
                   src: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/code.png",
@@ -99,18 +99,18 @@ function HeroBackground() {
           duration: 2.5,
         }}
       >
-        <div className="relative flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <div
             className="absolute
-            border-x-4 border-[#333333]
+            border-x-8 border-y-0 border-[#333333]
             rounded-full
-            h-[500px] w-[500px] mt-52 animate-pulse"
+            h-[500px] w-[500px] animate-pulse"
           />
           <div
             className="absolute
             border-2 border-[#fffb003c] shadow-[0_0_50px_20px_rgba(255,251,0,0.24)]
             rounded-full
-            h-[650px] w-[650px] mt-52 animate-pulse"
+            h-[650px] w-[650px] animate-pulse"
           />
         </div>
       </motion.div>

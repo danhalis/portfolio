@@ -1,11 +1,14 @@
-import React from "react";
+import React, { RefObject } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import HeroBackground from "./HeroBackground";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-function Hero() {
+interface Props {
+  aboutRef: RefObject<HTMLElement>;
+}
+
+function Hero({ aboutRef }: Props) {
   const [text, count] = useTypewriter({
     words: ["Hi, my name's Hieu"],
     loop: true,
@@ -56,13 +59,16 @@ function Hero() {
             <span>{text}</span>
             <Cursor />
           </h1>
-          <Link href="#about">
-            <button
-              className="hero-btn"
-            >
-              About
-            </button>
-          </Link>
+          <button
+            className="hero-btn"
+            onClick={() => {
+              aboutRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            About
+          </button>
         </div>
       </motion.div>
     </div>

@@ -20,6 +20,8 @@ function HeroBackground() {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    if (typeof window === "undefined")
+      return;
     setWindowWidth(window.innerWidth);
   });
 

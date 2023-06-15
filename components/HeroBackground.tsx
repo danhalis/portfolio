@@ -4,6 +4,7 @@ import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import opacityAnimation from "@/constants/animation/hero-background-opacity.json";
+import { isMobile } from "react-device-detect";
 
 function HeroBackground() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -31,70 +32,27 @@ function HeroBackground() {
           fpsLimit: 120,
           particles: {
             number: {
-              value: 5,
+              density: {
+                enable: !isMobile,
+                area: 900,
+            },
+              value: isMobile? 3 : 5,
+            },
+            shadow: {
+              enable: true,
+              color: "#00c8ff",
+              blur: 30,
             },
             shape: {
-              type: "circle",
-            },
-            color: {
-              value: ["#fffb00", "#00c8ff"],
-            },
-            opacity: {
-              value: 0.5,
-            },
-            size: {
-              value: {
-                min: 15,
-                max: 15,
-              },
-            },
-            links: {
-              color: "ffffff",
-              distance: 200,
-              enable: true,
-              opacity: 0.5,
-              width: 2,
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              speed: 5,
-              outModes: {
-                default: "bounce",
-              },
-            },
-            collisions: {
-              enable: false,
-              maxSpeed: 5,
-            },
-          },
-          detectRetina: true,
-        }}
-      />
-      <Particles
-        id="tsparticles1"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={{
-          style: {
-            position: "absolute",
-          },
-          fpsLimit: 120,
-          particles: {
-            number: {
-              value: 3,
-            },
-            shape: {
-              type: "image",
+              type: isMobile? "image" : ["circle", "image"],
               images: [
                 {
                   src: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/code.png",
-                  fill: true,
                 },
               ],
             },
             color: {
-              value: ["#fffb00", "#00c8ff"],
+              value: "#00c8ff73",
             },
             opacity: {
               value: 0.5,

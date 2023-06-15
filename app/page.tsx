@@ -18,17 +18,17 @@ export default function Home() {
       className="
       h-screen z-0
       text-white
-      snap-y snap-mandatory
+      lg:snap-y lg:snap-mandatory
       overflow-scroll
       "
     >
       <Header />
-      <section className="h-1 snap-center" />
-      <section id="hero" className="snap-start" ref={heroRef}>
+      <section className="lg:h-1 lg:snap-center" />
+      <section id="hero" className="lg:snap-center" ref={heroRef}>
         <Hero aboutRef={aboutRef} />
       </section>
 
-      <section id="about" className="snap-center" ref={aboutRef}>
+      <section id="about" className="lg:snap-center" ref={aboutRef}>
         <About />
       </section>
     </div>

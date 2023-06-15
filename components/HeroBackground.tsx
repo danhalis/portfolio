@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import { motion } from "framer-motion";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
@@ -16,14 +16,6 @@ function HeroBackground() {
     async (container: Container | undefined) => {},
     []
   );
-
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    if (typeof window === "undefined")
-      return;
-    setWindowWidth(window.innerWidth);
-  });
 
   return (
     <div className="relative w-full h-full">
@@ -51,8 +43,8 @@ function HeroBackground() {
             },
             size: {
               value: {
-                min: windowWidth <= 512 ? 10 : 15,
-                max: windowWidth <= 512 ? 10 : 15,
+                min: window?.innerWidth <= 512 ? 10 : 15,
+                max: window?.innerWidth <= 512 ? 10 : 15,
               },
             },
             links: {
@@ -108,8 +100,8 @@ function HeroBackground() {
             },
             size: {
               value: {
-                min: windowWidth <= 512 ? 10 : 15,
-                max: windowWidth <= 512 ? 10 : 15,
+                min: window?.innerWidth <= 512 ? 10 : 15,
+                max: window?.innerWidth <= 512 ? 10 : 15,
               },
             },
             links: {

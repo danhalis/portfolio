@@ -43,8 +43,8 @@ function HeroBackground() {
             },
             size: {
               value: {
-                min: window.innerWidth <= 512 ? 10 : 15,
-                max: window.innerWidth <= 512 ? 10 : 15,
+                min: window?.innerWidth <= 512 ? 10 : 15,
+                max: window?.innerWidth <= 512 ? 10 : 15,
               },
             },
             links: {
@@ -100,8 +100,8 @@ function HeroBackground() {
             },
             size: {
               value: {
-                min: window.innerWidth <= 512 ? 10 : 15,
-                max: window.innerWidth <= 512 ? 10 : 15,
+                min: window?.innerWidth <= 512 ? 10 : 15,
+                max: window?.innerWidth <= 512 ? 10 : 15,
               },
             },
             links: {

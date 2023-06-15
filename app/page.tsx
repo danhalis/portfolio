@@ -1,6 +1,5 @@
 "use client";
 
-import BackgroundCircles from "@/components/BackgroundCircles";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Head from "next/head";

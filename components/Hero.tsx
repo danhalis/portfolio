@@ -1,6 +1,6 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import BackgroundCircles from "./BackgroundCircles";
+import HeroBackground from "./HeroBackground";
 
 function Hero() {
   const [text, count] = useTypewriter({
@@ -9,10 +9,16 @@ function Hero() {
     delaySpeed: 2000,
   });
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center
-    overflow-hidden">
-      <BackgroundCircles />
-      <h1>
+    <div
+      className="
+      h-screen
+      flex flex-col
+      relative
+      space-y-8 items-center justify-center
+      overflow-hidden"
+    >
+      <HeroBackground />
+      <h1 className="absolute">
         <span>{text}</span>
         <Cursor />
       </h1>

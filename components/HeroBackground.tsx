@@ -17,6 +17,11 @@ function HeroBackground() {
     []
   );
 
+  let windowWidth = 0;
+  if (typeof window !== "undefined") {
+    windowWidth = window.innerWidth;
+  }
+
   return (
     <div className="relative w-full h-full">
       <Particles
@@ -43,8 +48,8 @@ function HeroBackground() {
             },
             size: {
               value: {
-                min: window?.innerWidth <= 512 ? 10 : 15,
-                max: window?.innerWidth <= 512 ? 10 : 15,
+                min: windowWidth <= 512 ? 10 : 15,
+                max: windowWidth <= 512 ? 10 : 15,
               },
             },
             links: {
@@ -100,8 +105,8 @@ function HeroBackground() {
             },
             size: {
               value: {
-                min: window?.innerWidth <= 512 ? 10 : 15,
-                max: window?.innerWidth <= 512 ? 10 : 15,
+                min: windowWidth <= 512 ? 10 : 15,
+                max: windowWidth <= 512 ? 10 : 15,
               },
             },
             links: {

@@ -11,7 +11,7 @@ interface Props {
 
 function Hero({ aboutRef }: Props) {
   const [text, count] = useTypewriter({
-    words: ["Hi, my name's Hieu"],
+    words: ["Hi, my name's Hieu", "a.k.a Dan Halis", "@danhalis"],
     loop: true,
     delaySpeed: 2000,
   });

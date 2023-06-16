@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Vietnam from "./Vietnam";
 import Arrow from "./Arrow";
+import { useMediaQuery } from "react-responsive";
 
 function About() {
+  const isSmallerScreen = useMediaQuery({ query: "(max-width: 1280px)" });
+
   return (
     <div
       className="h-screen max-w-7xl
@@ -25,7 +28,7 @@ function About() {
       >
         <motion.img
           className="object-cover rounded-lg
-          md:w-96 md:h-96 md:rounded-lg"
+          md:w-96 md:h-96 md:rounded-lg z-10"
           initial={{
             x: -200,
             opacity: 0,
@@ -54,16 +57,16 @@ function About() {
           </p>
           <div className="relative">
             <Arrow
-              className="absolute -top-[50px] -left-[230px] transform rotate-12"
+              className="hidden xl:inline-block absolute -top-[50px] -left-[230px] transform rotate-12"
               strokeWidth={20}
               strokeColor="#ffffff"
               width={80}
               height={80}
             />
             <Vietnam
-              className="absolute -top-[180px] -left-[170px]"
+              className="absolute text-[#ffffff35] -top-[0px] -left-[170px] md:-top-[60px] md:-left-[170px] xl:-top-[180px] xl:-left-[170px]"
               strokeWidth={16}
-              strokeColor="#ffffff9c"
+              strokeColor={isSmallerScreen ? "#ffffff35" : "#ffffff9c"}
               height={400}
             />
           </div>

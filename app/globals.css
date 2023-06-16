@@ -16,8 +16,8 @@
       0 0 11px #8a8a8a,
       0 0 19px #8a8a8a;
     @apply
-      uppercase text-sm text-center
-      pb-2 tracking-[14px] leading-7
+      !uppercase !text-sm !text-center
+      !pb-2 !tracking-[14px] !leading-7
   }
 
   .hero-btn {

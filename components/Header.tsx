@@ -7,9 +7,11 @@ function Header() {
     <header
       className="
       sticky top-0 z-20
+      bg-[#242424d8]
+      lg:bg-transparent
       flex justify-between
       max-w-7xl mx-auto
-      p-5
+      px-5 lg:py-5
     "
     >
       <motion.div

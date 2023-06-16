@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Vietnam from "./Vietnam";
+import Arrow from "./Arrow";
 
 function About() {
   return (
@@ -12,7 +14,7 @@ function About() {
       <h3
         className="
         uppercase text-2xl text-gray-500 tracking-[20px]
-        my-10 md:my-28"
+        my-10 mt-16 md:my-28"
       >
         About
       </h3>
@@ -39,18 +41,33 @@ function About() {
           src="https://raw.githubusercontent.com/danhalis/portfolio/master/public/about-photo.jpg"
         />
 
-        {/* <div> */}
-        <p className="text-base text-justify">
-          My name is <b>HIEU DAO LE DUC</b>.<br />
-          <b>Dan Halis (danhalis)</b> is my artist/in-game name. I come from
-          Vietnam 🇻🇳.
-          <br />
-          <br />I graduated in Computer Science at John Abbott College in 2022.
-          Movies, music and video games are my go-to hobbies. I also love
-          programming, especially software development since softwares are cool
-          and the world needs them.
-        </p>
-        {/* </div> */}
+        <div className="flex">
+          <p className="text-base text-justify leading-7">
+            My name is <b>HIEU DAO LE DUC</b>.<br />
+            <b>Dan Halis (danhalis)</b> is my artist/in-game name. I come from
+            Vietnam 🇻🇳.
+            <br />
+            <br />I graduated in Computer Science at John Abbott College in
+            2022. Movies, music and video games are my go-to hobbies. I also
+            love programming, especially software development since softwares
+            are cool and the world needs them.
+          </p>
+          <div className="relative">
+            <Arrow
+              className="absolute -top-[50px] -left-[230px] transform rotate-12"
+              strokeWidth={20}
+              strokeColor="#ffffff"
+              width={80}
+              height={80}
+            />
+            <Vietnam
+              className="absolute -top-[180px] -left-[170px]"
+              strokeWidth={16}
+              strokeColor="#ffffff9c"
+              height={400}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

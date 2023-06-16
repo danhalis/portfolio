@@ -18,7 +18,7 @@ function Hero({ aboutRef }: Props) {
   return (
     <div
       className="
-      h-screen
+      h-[800px]
       flex flex-col
       relative
       items-center justify-center
@@ -50,25 +50,15 @@ function Hero({ aboutRef }: Props) {
             width={200}
             height={200}
           />
-          <h2
-            className="hero-title"
-          >
-            Software Developer
-          </h2>
+          <h2 className="hero-title">Software Developer</h2>
           <h1 className="h-20 text-center text-3xl lg:text-5xl font-semibold px-10">
             <span className="">{text}</span>
             <Cursor />
           </h1>
-          <div className="space-x-3">
-            <HeroButton sectionRef={aboutRef}>
-              About
-            </HeroButton>
-            <HeroButton sectionRef={aboutRef}>
-              Skills
-            </HeroButton>
-            <HeroButton sectionRef={aboutRef}>
-              Projects
-            </HeroButton>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <HeroButton sectionRef={aboutRef}>About</HeroButton>
+            <HeroButton sectionRef={aboutRef}>Skills</HeroButton>
+            <HeroButton sectionRef={aboutRef}>Projects</HeroButton>
           </div>
         </div>
       </motion.div>

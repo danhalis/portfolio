@@ -10,11 +10,36 @@
 }
 
 @layer components {
+  .hero-title {
+    text-shadow:
+      0 0 4px #8a8a8a,
+      0 0 11px #8a8a8a,
+      0 0 19px #8a8a8a;
+    @apply
+      uppercase text-sm text-center
+      pb-2 tracking-[14px] leading-7
+  }
+
   .hero-btn {
     @apply
       !px-6 !py-2 !border !border-[#242424]
       !rounded-full
-      !uppercase !text-sm !tracking-widest !text-gray-500
+      !uppercase !text-sm !text-[#8a8a8a] !tracking-widest
       !transition-all hover:!border-[#fffb00]/40 hover:!text-[#fffb00]/40;
+  }
+
+  .hero-btn:hover {
+    animation: yellowflicker 1.5s infinite alternate;
+  }
+
+  @keyframes yellowflicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fffb00,
+        0 0 11px #fffb00;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
   }
 }

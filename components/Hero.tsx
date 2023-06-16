@@ -3,6 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import HeroBackground from "./HeroBackground";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import HeroButton from "./HeroButton";
 
 interface Props {
   aboutRef: RefObject<HTMLElement>;
@@ -50,25 +51,25 @@ function Hero({ aboutRef }: Props) {
             height={200}
           />
           <h2
-            className="uppercase text-sm text-center text-gray-500
-            pb-2 tracking-[14px] leading-7"
+            className="hero-title"
           >
             Software Developer
           </h2>
-          <h1 className="text-center text-3xl lg:text-6xl font-semibold px-10">
-            <span>{text}</span>
+          <h1 className="h-20 text-center text-3xl lg:text-5xl font-semibold px-10">
+            <span className="">{text}</span>
             <Cursor />
           </h1>
-          <button
-            className="hero-btn"
-            onClick={() => {
-              aboutRef.current?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            About
-          </button>
+          <div className="space-x-3">
+            <HeroButton sectionRef={aboutRef}>
+              About
+            </HeroButton>
+            <HeroButton sectionRef={aboutRef}>
+              Skills
+            </HeroButton>
+            <HeroButton sectionRef={aboutRef}>
+              Projects
+            </HeroButton>
+          </div>
         </div>
       </motion.div>
     </div>

@@ -65,8 +65,8 @@ function About() {
             />
             <Vietnam
               className="absolute text-[#ffffff35] -top-[0px] -left-[170px] md:-top-[60px] md:-left-[170px] xl:-top-[180px] xl:-left-[170px]"
-              strokeWidth={16}
-              strokeColor={isSmallerScreen ? "#ffffff35" : "#ffffff9c"}
+              strokeWidth={isSmallerScreen ? 7 : 16}
+              strokeColor="#ffffff9c"
               height={400}
             />
           </div>

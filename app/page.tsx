@@ -1,8 +1,11 @@
 "use client";
 
-import About from "@/components/About";
+import dynamic from "next/dynamic";
+const About = dynamic(() => import("@/components/About"), { ssr: false }); // About section needs access to client device
+// (https://github.com/vercel/next.js/discussions/14469#discussioncomment-29422)
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+
 import { useEffect, useRef } from "react";
 
 export default function Home() {

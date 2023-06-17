@@ -8,6 +8,9 @@ function About() {
   const isSmallerThan2XLScreen = useMediaQuery({
     query: "(max-width: 1536px)",
   });
+  const isSmallerThan360Screen = useMediaQuery({
+    query: "(max-width: 360px)",
+  });
 
   return (
     <div
@@ -66,10 +69,24 @@ function About() {
               height={80}
             />
             <Vietnam
-              className="absolute text-[#ffffff35] -top-[0px] -left-[450px] md:-top-[120px] md:-left-[300px] 2xl:-top-[180px] 2xl:-left-[200px]"
+              className={`
+                absolute
+                ${
+                  isSmallerThan360Screen
+                    ? "-top-[0px] -left-[200px]"
+                    : "top-[25px] -left-[300px]"
+                }
+                md:-top-[120px] md:-left-[300px]
+                2xl:-top-[180px] 2xl:-left-[200px]`}
               strokeWidth={isSmallerThan2XLScreen ? 7 : 16}
               strokeColor="#ffffff9c"
-              height={isSmallerThan2XLScreen ? 350 : 400}
+              height={
+                isSmallerThan360Screen
+                  ? 300
+                  : isSmallerThan2XLScreen
+                  ? 350
+                  : 400
+              }
             />
           </div>
         </div>

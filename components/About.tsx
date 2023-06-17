@@ -19,13 +19,7 @@ function About() {
       px-10 mx-auto
       md:text-left"
     >
-      <h3
-        className="
-        uppercase text-2xl text-gray-500 tracking-[20px]
-        my-10 mt-16 md:my-28"
-      >
-        About
-      </h3>
+      <h3 className="section-title">About</h3>
 
       <div
         className="flex flex-col
@@ -50,7 +44,7 @@ function About() {
         />
 
         <div className="flex">
-          <p className="text-base text-justify leading-7">
+          <p className="text-base text-justify leading-7 max-w-2xl 2xl:pr-10">
             My name is <b>HIEU DAO LE DUC</b>.<br />
             <b>Dan Halis (danhalis)</b> is my artist/in-game name. I come from
             Vietnam 🇻🇳.
@@ -62,14 +56,15 @@ function About() {
           </p>
           <div className="relative">
             <Arrow
-              className="hidden 2xl:inline-block absolute -top-[50px] -left-[250px] transform rotate-6"
+              className="hidden 2xl:inline-block absolute -top-[30px] -left-[150px] transform rotate-6"
               strokeWidth={20}
               strokeColor="#ffffff"
-              width={80}
-              height={80}
+              width={55}
+              height={55}
             />
             <Vietnam
               className={`
+                text-[#ffffff9c]
                 absolute
                 ${
                   isSmallerThan360Screen
@@ -77,7 +72,7 @@ function About() {
                     : "top-[25px] -left-[300px]"
                 }
                 md:-top-[120px] md:-left-[300px]
-                2xl:-top-[180px] 2xl:-left-[200px]`}
+                2xl:-top-[110px] 2xl:-left-[100px]`}
               strokeWidth={isSmallerThan2XLScreen ? 7 : 16}
               strokeColor="#ffffff9c"
               height={
@@ -85,7 +80,7 @@ function About() {
                   ? 300
                   : isSmallerThan2XLScreen
                   ? 350
-                  : 400
+                  : 360
               }
             />
           </div>

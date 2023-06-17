@@ -5,7 +5,9 @@ import Arrow from "./Arrow";
 import { useMediaQuery } from "react-responsive";
 
 function About() {
-  const isSmallerScreen = useMediaQuery({ query: "(max-width: 1280px)" });
+  const isSmallerThan2XLScreen = useMediaQuery({
+    query: "(max-width: 1536px)",
+  });
 
   return (
     <div
@@ -57,17 +59,17 @@ function About() {
           </p>
           <div className="relative">
             <Arrow
-              className="hidden xl:inline-block absolute -top-[50px] -left-[230px] transform rotate-12"
+              className="hidden 2xl:inline-block absolute -top-[50px] -left-[250px] transform rotate-6"
               strokeWidth={20}
               strokeColor="#ffffff"
               width={80}
               height={80}
             />
             <Vietnam
-              className="absolute text-[#ffffff35] -top-[0px] -left-[170px] md:-top-[60px] md:-left-[170px] xl:-top-[180px] xl:-left-[170px]"
-              strokeWidth={isSmallerScreen ? 7 : 16}
+              className="absolute text-[#ffffff35] -top-[0px] -left-[450px] md:-top-[120px] md:-left-[300px] 2xl:-top-[180px] 2xl:-left-[200px]"
+              strokeWidth={isSmallerThan2XLScreen ? 7 : 16}
               strokeColor="#ffffff9c"
-              height={400}
+              height={isSmallerThan2XLScreen ? 350 : 400}
             />
           </div>
         </div>

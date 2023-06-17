@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { createRef, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 
@@ -112,7 +112,7 @@ function Vietnam({ className, height, strokeWidth, strokeColor }: Props) {
             }}
           />
           {islandPathCodes.map((islandPathCode, index) => {
-            const islandSVGPathRef = useRef<SVGPathElement>(null);
+            const islandSVGPathRef = createRef<SVGPathElement>();
             islandSVGPathRefs.push(islandSVGPathRef);
             return (
               <motion.path

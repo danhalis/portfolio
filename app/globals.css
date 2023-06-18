@@ -5,7 +5,8 @@
 @layer base {
   body {
     @apply
-      bg-[#242424];
+      bg-[#242424]
+      min-w-[360px];
   }
 }
 

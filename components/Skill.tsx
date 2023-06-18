@@ -15,7 +15,7 @@ function Skill({ name, img, url, style, fromLeft = false }: Props) {
     <motion.div
       className="group relative flex cursor-pointer"
       initial={{
-        x: fromLeft ? -200 : 200,
+        x: fromLeft ? -100 : 100,
         opacity: 0,
       }}
       whileInView={{ x: 0, opacity: 1 }}

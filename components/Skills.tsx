@@ -74,11 +74,11 @@ function Skills() {
           name="React Native"
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/react-native2.png"
           url="https://reactnative.dev/"
-          fromLeft
           style={{
             backgroundColor: "#20232a",
             paddingBottom: 5,
           }}
+          fromLeft
         />
         <Skill
           name="Xamarin"

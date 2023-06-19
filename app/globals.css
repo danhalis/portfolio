@@ -8,6 +8,23 @@
       bg-[#242424]
       min-w-[360px];
   }
+
+  img {  
+    -drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  code {
+    padding: 2px 4px;
+    font-size: .9em;
+    line-height: 1;
+    background-color: rgba(110,118,129,0.4);
+    border-radius: 6px;
+  }
 }
 
 @layer components {

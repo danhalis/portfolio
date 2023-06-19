@@ -8,11 +8,13 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 
 import { useEffect, useRef } from "react";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const skillsRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     heroRef.current?.scrollIntoView();
@@ -30,7 +32,7 @@ export default function Home() {
       <Header />
       <section className="lg:h-1 lg:snap-center" />
       <section id="hero" className="lg:snap-center" ref={heroRef}>
-        <Hero aboutRef={aboutRef} skillsRef={skillsRef} />
+        <Hero aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} />
       </section>
 
       <section id="about" className="lg:snap-center" ref={aboutRef}>
@@ -43,6 +45,14 @@ export default function Home() {
         ref={skillsRef}
       >
         <Skills />
+      </section>
+
+      <section
+        id="projects"
+        className="lg:snap-center"
+        ref={projectsRef}
+      >
+        <Projects />
       </section>
     </div>
   );

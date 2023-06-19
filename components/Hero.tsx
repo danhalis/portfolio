@@ -8,9 +8,10 @@ import HeroButton from "./HeroButton";
 interface Props {
   aboutRef: RefObject<HTMLElement>;
   skillsRef: RefObject<HTMLElement>;
+  projectsRef: RefObject<HTMLElement>;
 }
 
-function Hero({ aboutRef, skillsRef }: Props) {
+function Hero({ aboutRef, skillsRef, projectsRef }: Props) {
   const [text, count] = useTypewriter({
     words: ["Hi, my name's Hieu", "a.k.a Dan Halis", "@danhalis"],
     loop: true,
@@ -59,7 +60,7 @@ function Hero({ aboutRef, skillsRef }: Props) {
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             <HeroButton sectionRef={aboutRef}>About</HeroButton>
             <HeroButton sectionRef={skillsRef}>Skills</HeroButton>
-            <HeroButton sectionRef={aboutRef}>Projects</HeroButton>
+            <HeroButton sectionRef={projectsRef}>Projects</HeroButton>
           </div>
         </div>
       </motion.div>

@@ -2,13 +2,13 @@
 
 import dynamic from "next/dynamic";
 const About = dynamic(() => import("@/components/About"), { ssr: false }); // About section needs access to client device
+const Projects = dynamic(() => import("@/components/Projects"), { ssr: false }); // About section needs access to client device
 // (https://github.com/vercel/next.js/discussions/14469#discussioncomment-29422)
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 
 import { useEffect, useRef } from "react";
-import Projects from "@/components/Projects";
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);

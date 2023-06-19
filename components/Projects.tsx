@@ -1,16 +1,9 @@
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
 import ProjectCard from "./ProjectCard";
 
 function Projects() {
-  const projects = [1, 2, 3];
-  const style = {
-    width: 297,
-    height: 296,
-  };
-
   const [selectedSlide, setSelectedSlide] = useState<number>(0);
   const [xDown, setXDown] = useState<number | null>(null);
   const [yDown, setYDown] = useState<number | null>(null);

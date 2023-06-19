@@ -75,7 +75,7 @@ function Projects() {
             },
             {
               name: "react-hook-form",
-              icon: "/skills/react-hook-form.png",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/react-hook-form.png",
               url: "https://www.react-hook-form.com/",
             },
             {
@@ -123,7 +123,7 @@ function Projects() {
             },
             {
               name: "react-hook-form",
-              icon: "/skills/react-hook-form.png",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/react-hook-form.png",
               url: "https://www.react-hook-form.com/",
             },
             {

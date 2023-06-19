@@ -1,15 +1,9 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Link from "next/link";
 import TechIcon from "./TechIcon";
-
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
 
 interface Props {
   img: string;
@@ -46,8 +40,9 @@ export default function RecipeReviewCard({
           <h4 className="text-3xl">{title}</h4>
         </Link>
         <div className="flex items-center space-x-3">
-          {techStack.map((tech) => (
+          {techStack.map((tech, index) => (
             <TechIcon
+              key={index}
               icon={tech.icon}
               alt={tech.name}
               url={tech.url}

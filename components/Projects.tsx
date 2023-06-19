@@ -228,6 +228,7 @@ function Projects() {
         }}
       >
         <Carousel
+          showNavigation={false}
           slides={slides}
           goToSlide={selectedSlide}
           animationConfig={config.slow}

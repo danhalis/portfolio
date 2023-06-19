@@ -2,7 +2,6 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
-import Project from "./Project";
 import ProjectCard from "./ProjectCard";
 
 function Projects() {

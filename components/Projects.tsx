@@ -62,7 +62,7 @@ function Projects() {
       key: "0",
       content: (
         <ProjectCard
-          img="/projects/netflix-clone.png"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/netflix-clone.png"
           title="Netflix Website Clone"
           url="https://netflix-clone-app-danhalis.vercel.app/"
           techStack={[
@@ -110,7 +110,7 @@ function Projects() {
       key: "1",
       content: (
         <ProjectCard
-          img="/projects/tip-calculator-app.gif"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/tip-calculator-app.gif"
           title="Tip Calculator"
           url="https://tip-calculator-app-danhalis.vercel.app/"
           techStack={[
@@ -154,7 +154,7 @@ function Projects() {
       key: "2",
       content: (
         <ProjectCard
-          img="/projects/path-to-love.gif"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/path-to-love.gif"
           title="Path To Love"
           url="https://pathtolove.danhalis.repl.co/"
           techStack={[

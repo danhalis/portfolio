@@ -72,7 +72,7 @@ function Skills() {
         />
         <Skill
           name="React Native"
-          img="/skills/react-native.png"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/react-native.png"
           url="https://reactnative.dev/"
           style={{
             backgroundColor: "#20232a",

@@ -32,7 +32,11 @@ export default function Home() {
       <Header />
       <section className="lg:h-1 lg:snap-center" />
       <section id="hero" className="lg:snap-center" ref={heroRef}>
-        <Hero aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} />
+        <Hero
+          aboutRef={aboutRef}
+          skillsRef={skillsRef}
+          projectsRef={projectsRef}
+        />
       </section>
 
       <section id="about" className="lg:snap-center" ref={aboutRef}>
@@ -49,7 +53,7 @@ export default function Home() {
 
       <section
         id="projects"
-        className="lg:snap-center"
+        className="lg:snap-center relative top-10 sm:top-48 md:top-0"
         ref={projectsRef}
       >
         <Projects />

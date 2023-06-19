@@ -277,7 +277,7 @@ function Projects() {
   return (
     <div
       className="
-      h-auto sm:h-screen max-w-7xl
+      h-screen max-w-7xl
       flex flex-col items-center
       px-10 mx-auto"
     >

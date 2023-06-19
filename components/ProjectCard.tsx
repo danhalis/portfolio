@@ -28,12 +28,8 @@ export default function ProjectCard({
 }: Props) {
   return (
     <Card
-      style={{
-        width: 500,
-        boxShadow: "none",
-        backgroundColor: "transparent",
-        color: "white",
-      }}
+      className="w-[360px] sm:w-[500px]
+      bg-transparent text-white shadow-none"
     >
       <CardMedia
         className="h-96 bg-[#1b1b1b97]"

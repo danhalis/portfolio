@@ -4,6 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Link from "next/link";
 import TechIcon from "./TechIcon";
+import LinkIcon from "@mui/icons-material/Link";
 
 interface Props {
   img: string;
@@ -18,7 +19,7 @@ interface Props {
   description: React.ReactNode;
 }
 
-export default function RecipeReviewCard({
+export default function ProjectCard({
   img,
   title,
   url,
@@ -34,10 +35,21 @@ export default function RecipeReviewCard({
         color: "white",
       }}
     >
-      <CardMedia component="img" image={img} alt={title} />
+      <CardMedia
+        className="h-96 bg-[#1b1b1b97]"
+        component="img"
+        image={img}
+        alt={title}
+      />
       <CardContent className="flex flex-col space-y-3">
-        <Link href={url} target="_blank" rel="noreferrer">
+        <Link
+          className="flex space-x-2 items-center"
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+        >
           <h4 className="text-3xl">{title}</h4>
+          <LinkIcon />
         </Link>
         <div className="flex items-center space-x-3">
           {techStack.map((tech, index) => (

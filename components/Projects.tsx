@@ -169,6 +169,102 @@ function Projects() {
         />
       ),
     },
+    {
+      key: "3",
+      content: (
+        <ProjectCard
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/plantech.gif"
+          title="Plant-Tech"
+          url="https://github.com/danhalis/plantech"
+          techStack={[
+            {
+              name: "Xamarin",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/xamarin.svg",
+              url: "https://dotnet.microsoft.com/apps/xamarin",
+            },
+            {
+              name: "C#",
+              icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+              url: "https://learn.microsoft.com/dotnet/csharp/",
+            },
+            {
+              name: "Python",
+              icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+              url: "https://www.python.org",
+            },
+            {
+              name: "Azure IoT Hub",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/azure-iot-hub.svg",
+              url: "https://azure.microsoft.com/products/iot-hub/",
+            },
+          ]}
+          description={
+            <p>
+              This is an IoT school project powered by <code>Xamarin</code> +{" "}
+              <code>Python</code> + <code>Azure IoT Hub</code>. The objective is
+              to build an application that monitors the environment conditions
+              inside a farm container.
+            </p>
+          }
+        />
+      ),
+    },
+    {
+      key: "4",
+      content: (
+        <ProjectCard
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/budget-manager.gif"
+          title="Budget Manager"
+          url="https://github.com/danhalis/BudgetManager"
+          techStack={[
+            {
+              name: "WPF",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/windows.png",
+              url: "https://learn.microsoft.com/dotnet/desktop/wpf",
+            },
+            {
+              name: "C#",
+              icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+              url: "https://learn.microsoft.com/dotnet/csharp/",
+            },
+          ]}
+          description={
+            <p>
+              This is a school project put together by me and 2 other people. It
+              is a Windows desktop app powered by <code>WPF .NET</code> that
+              helps record expenses and income.
+            </p>
+          }
+        />
+      ),
+    },
+    {
+      key: "5",
+      content: (
+        <ProjectCard
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/calculator-app.gif"
+          title="Calculator App"
+          url="https://github.com/danhalis/CalculatorApp"
+          techStack={[
+            {
+              name: "Xamarin",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/xamarin.svg",
+              url: "https://dotnet.microsoft.com/apps/xamarin",
+            },
+            {
+              name: "C#",
+              icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+              url: "https://learn.microsoft.com/dotnet/csharp/",
+            },
+          ]}
+          description={
+            <p>
+              A mobile calculator app powered by <code>Xamarin</code>.
+            </p>
+          }
+        />
+      ),
+    },
   ].map((slide, index) => {
     return {
       ...slide,
@@ -191,7 +287,6 @@ function Projects() {
         className="h-5/6"
         style={{ width: "80%", margin: "0 auto" }}
         onTouchStart={(evt: React.TouchEvent<HTMLDivElement>) => {
-
           const firstTouch = getTouches(evt)[0];
           setXDown(firstTouch.clientX);
           setYDown(firstTouch.clientY);

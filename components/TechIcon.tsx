@@ -1,3 +1,4 @@
+import Tooltip from "@mui/material/Tooltip";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,13 +13,9 @@ interface Props {
 function TechIcon({ icon, alt, url, style }: Props) {
   return (
     <Link href={url} target="_blank" rel="noreferrer">
-      <Image
-        src={icon}
-        alt={alt}
-        width="25"
-        height="25"
-        style={style}
-      />
+      <Tooltip title={alt} arrow placement="top">
+        <Image src={icon} alt={alt} width="25" height="25" style={style} />
+      </Tooltip>
     </Link>
   );
 }

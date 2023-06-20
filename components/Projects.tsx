@@ -90,10 +90,10 @@ function Projects() {
             },
           ]}
           description={
-            <p>
+            <span>
               A clone of Netflix web app powered by <code>Next.js</code> +{" "}
               <code>Tailwind CSS</code> + <code>Firebase</code>.
-            </p>
+            </span>
           }
         />
       ),
@@ -133,11 +133,11 @@ function Projects() {
             },
           ]}
           description={
-            <p>
+            <span>
               A web app powered by <code>Next.js</code> +{" "}
               <code>Tailwind CSS</code> that calculates tip given the bill, tip
               percentage and number of people.
-            </p>
+            </span>
           }
         />
       ),
@@ -162,9 +162,9 @@ function Projects() {
             },
           ]}
           description={
-            <p>
+            <span>
               A web-based game coded in <code>JavaScript/TypeScript</code>.
-            </p>
+            </span>
           }
         />
       ),
@@ -199,12 +199,12 @@ function Projects() {
             },
           ]}
           description={
-            <p>
+            <span>
               This is an IoT school project powered by <code>Xamarin</code> +{" "}
               <code>Python</code> + <code>Azure IoT Hub</code>. The objective is
               to build an application that monitors the environment conditions
               inside a farm container.
-            </p>
+            </span>
           }
         />
       ),
@@ -229,11 +229,11 @@ function Projects() {
             },
           ]}
           description={
-            <p>
+            <span>
               This is a school project put together by me and 2 other people. It
               is a Windows desktop app powered by <code>WPF .NET</code> that
               helps record expenses and income.
-            </p>
+            </span>
           }
         />
       ),
@@ -258,9 +258,9 @@ function Projects() {
             },
           ]}
           description={
-            <p>
+            <span>
               A mobile calculator app powered by <code>Xamarin</code>.
-            </p>
+            </span>
           }
         />
       ),

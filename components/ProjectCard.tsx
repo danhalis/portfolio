@@ -28,7 +28,7 @@ export default function ProjectCard({
 }: Props) {
   return (
     <Card
-      className="w-[100vw] sm:w-[500px]
+      className="w-[80vw] sm:w-[500px]
       bg-transparent text-white shadow-none"
     >
       <CardMedia

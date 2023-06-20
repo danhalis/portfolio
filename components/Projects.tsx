@@ -279,7 +279,7 @@ function Projects() {
       className="
       h-screen max-w-7xl
       flex flex-col items-center
-      px-10 mx-auto"
+      px-10 mx-auto overflow-hidden"
     >
       <h3 className="section-title mb-0">Projects</h3>
 

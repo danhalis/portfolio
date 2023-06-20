@@ -6,8 +6,9 @@ function Skills() {
   return (
     <motion.div
       className="h-auto sm:h-screen max-w-7xl
-      flex flex-col items-center
-      px-10 mx-auto"
+      flex flex-col items-center px-10 mx-auto
+      overflow-hidden
+      "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}

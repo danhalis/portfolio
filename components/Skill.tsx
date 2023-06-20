@@ -23,7 +23,7 @@ function Skill({ name, img, url, style, fromLeft = false }: Props) {
     >
       <img
         className={`rounded-full border border-gray-500 object-contain
-        w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28
+        w-[20vw] h-[20vw] sm:w-24 sm:h-24 md:w-28 md:h-28
         filter group-hover:grayscale transition duration-300 ease-in-out`}
         style={style}
         src={img}
@@ -32,10 +32,10 @@ function Skill({ name, img, url, style, fromLeft = false }: Props) {
         className="absolute opacity-0
         rounded-full z-0
         flex items-center justify-center
-        w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28
+        w-[20vw] h-[20vw] sm:w-24 sm:h-24 md:w-28 md:h-28
         group-hover:opacity-80 group-hover:bg-white transition duration-300 ease-in-out"
       >
-        <p className="text-lg font-bold text-center text-black opacity-100">
+        <p className="text-base font-bold text-center text-black opacity-100">
           {name}
         </p>
       </div>

@@ -57,7 +57,7 @@ function Hero({ aboutRef, skillsRef, projectsRef }: Props) {
             <span className="">{text}</span>
             <Cursor />
           </h1>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="flex">
             <HeroButton sectionRef={aboutRef}>About</HeroButton>
             <HeroButton sectionRef={skillsRef}>Skills</HeroButton>
             <HeroButton sectionRef={projectsRef}>Projects</HeroButton>

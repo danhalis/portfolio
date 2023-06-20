@@ -13,6 +13,7 @@ import {
 } from "@mui-treasury/components/info";
 import { useBouncyShadowStyles } from "@mui-treasury/styles/shadow/bouncy";
 import { useGalaxyInfoStyles } from "@mui-treasury/styles/info/galaxy";
+
 interface Props {
   img: string;
   title: string;

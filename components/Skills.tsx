@@ -73,7 +73,7 @@ function Skills() {
         />
         <Skill
           name=".NET Blazor"
-          img="skills/blazor.png"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/blazor.png"
           url="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor"
           style={{
             backgroundColor: "#1F1F1F",
@@ -83,7 +83,7 @@ function Skills() {
         />
         <Skill
           name="Entity Framework Core"
-          img="skills/efcore.jpg"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/efcore.jpg"
           url="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor"
           style={{
             backgroundColor: "#fff",

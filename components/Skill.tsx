@@ -41,7 +41,7 @@ function Skill({ name, img, url, style, fromLeft = false }: Props) {
       </div>
     </motion.div>
   );
-  return url ? <Link href={url}>{content}</Link> : <div>{content}</div>;
+  return url ? <Link href={url} target="_blank">{content}</Link> : <div>{content}</div>;
 }
 
 export default Skill;

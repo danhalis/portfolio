@@ -17,6 +17,16 @@ function Skills() {
 
       <div className="text-[#ffffffca] grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-5 lg:gap-7">
         <Skill
+          name="WPF"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/windows.png"
+          url="https://learn.microsoft.com/dotnet/desktop/wpf"
+          style={{
+            backgroundColor: "#171717",
+            padding: 20,
+          }}
+          fromLeft
+        />
+        <Skill
           name="React.js"
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/react.png"
           url="https://react.dev/"
@@ -62,12 +72,22 @@ function Skills() {
           fromLeft
         />
         <Skill
-          name="WPF"
-          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/windows.png"
-          url="https://learn.microsoft.com/dotnet/desktop/wpf"
+          name=".NET Blazor"
+          img="skills/blazor.png"
+          url="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor"
           style={{
-            backgroundColor: "#171717",
-            padding: 20,
+            backgroundColor: "#1F1F1F",
+            padding: 15,
+          }}
+          fromLeft
+        />
+        <Skill
+          name="Entity Framework Core"
+          img="skills/efcore.jpg"
+          url="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor"
+          style={{
+            backgroundColor: "#fff",
+            padding: 5,
           }}
           fromLeft
         />
@@ -89,7 +109,6 @@ function Skills() {
             backgroundColor: "#171717",
             padding: 15,
           }}
-          fromLeft
         />
 
         <Skill
@@ -125,7 +144,7 @@ function Skills() {
         <Skill
           name="JavaScript"
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/javascript.svg"
-          url="https://www.javascript.com/"
+          url="https://developer.mozilla.org/docs/Web/JavaScript"
           style={{
             backgroundColor: "#F7DF1E",
           }}

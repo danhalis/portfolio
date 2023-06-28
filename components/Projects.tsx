@@ -153,7 +153,7 @@ function Projects() {
             {
               name: "JavaScript",
               icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-              url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+              url: "https://developer.mozilla.org/docs/Web/JavaScript",
             },
             {
               name: "TypeScript",

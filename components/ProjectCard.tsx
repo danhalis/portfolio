@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -8,7 +8,6 @@ import LinkIcon from "@mui/icons-material/Link";
 import {
   Info,
   InfoCaption,
-  InfoSubtitle,
   InfoTitle,
 } from "@mui-treasury/components/info";
 import { useBouncyShadowStyles } from "@mui-treasury/styles/shadow/bouncy";
@@ -36,10 +35,27 @@ export default function ProjectCard({
 }: Props) {
   const bouncyStyle = useBouncyShadowStyles();
 
+  const [urlDisabled, setUrlDisabled] = useState<boolean>(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const checkIfCardIsSelected = () => {
+    const carouselItemHolder = cardRef.current?.parentElement;
+    const selected = carouselItemHolder?.style.transform.includes("scale(1)");
+    // Disable project url if the project card is unselected
+    setUrlDisabled(!selected);
+  }
+
+  useEffect(() => {
+    checkIfCardIsSelected();
+  }, []);
+
   return (
     <Card
+      ref={cardRef}
       className={`w-[80vw] sm:w-[500px]
       bg-transparent text-white shadow-none hover:shadow-lg ${bouncyStyle.root}`}
+      onClick={checkIfCardIsSelected}
+      onMouseMove={checkIfCardIsSelected}
     >
       <CardMedia
         className="h-96 bg-[#1b1b1b97]"
@@ -53,15 +69,22 @@ export default function ProjectCard({
           useStyles={useGalaxyInfoStyles}
         >
           <InfoTitle>
-            <Link
-              className="flex space-x-2 items-center"
-              href={url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h4 className="text-3xl">{title}</h4>
-              <LinkIcon />
-            </Link>
+            {urlDisabled ? (
+              <div className="flex space-x-2 items-center">
+                <h4 className="text-3xl">{title}</h4>
+                <LinkIcon />
+              </div>
+            ) : (
+              <Link
+                className="flex space-x-2 items-center"
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h4 className="text-3xl">{title}</h4>
+                <LinkIcon />
+              </Link>
+            )}
           </InfoTitle>
           <div className="flex items-center space-x-3">
             {techStack.map((tech, index) => (

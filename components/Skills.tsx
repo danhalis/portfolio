@@ -84,7 +84,7 @@ function Skills() {
         <Skill
           name="Entity Framework Core"
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/efcore.jpg"
-          url="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor"
+          url="https://learn.microsoft.com/ef/core/"
           style={{
             backgroundColor: "#fff",
             padding: 5,

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
 import ProjectCard from "./ProjectCard";
+import { v4 as uuidv4 } from "uuid";
 
 function Projects() {
   const [selectedSlide, setSelectedSlide] = useState<number>(0);
@@ -51,7 +52,7 @@ function Projects() {
 
   const slides = [
     {
-      key: "0",
+      key: uuidv4(),
       content: (
         <ProjectCard
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/netflix-clone.png"
@@ -99,7 +100,61 @@ function Projects() {
       ),
     },
     {
-      key: "1",
+      key: uuidv4(),
+      content: (
+        <ProjectCard
+          img="projects/ecommerce-webapp.gif"
+          title="E-Commerce Web App"
+          url="https://github.com/danhalis/E-Commerce_WebApp"
+          techStack={[
+            {
+              name: "ASP.NET",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/asp.net.png",
+              url: "https://asp.net",
+            },
+            {
+              name: ".NET Blazor",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/blazor.png",
+              url: "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
+            },
+            {
+              name: "Entity Framework Core",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/efcore.jpg",
+              url: "https://learn.microsoft.com/ef/core/",
+            },
+            {
+              name: "Tailwind CSS",
+              icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+              url: "https://tailwindcss.com/",
+            },
+            {
+              name: "Bootstrap",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/bootstrap.png",
+              url: "https://getbootstrap.com/",
+            },
+            {
+              name: "SQL Server",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/sqlserver.svg",
+              url: "https://www.microsoft.com/sql-server/",
+              style: {
+                backgroundColor: "#fff",
+                height: 25,
+                padding: 2,
+              },
+            },
+          ]}
+          description={
+            <span>
+              An e-commerce website powered by{" "}
+              <code>ASP.NET</code> + <code>Blazor</code> + <code>EFCore</code> + <code>Tailwind CSS</code> + <code>SQL Server</code>{" "}
+              that sells products of different categories like books, movies, video games
+            </span>
+          }
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
       content: (
         <ProjectCard
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/tip-calculator-app.gif"
@@ -143,7 +198,7 @@ function Projects() {
       ),
     },
     {
-      key: "2",
+      key: uuidv4(),
       content: (
         <ProjectCard
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/path-to-love.gif"
@@ -170,7 +225,7 @@ function Projects() {
       ),
     },
     {
-      key: "3",
+      key: uuidv4(),
       content: (
         <ProjectCard
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/plantech.gif"
@@ -210,7 +265,7 @@ function Projects() {
       ),
     },
     {
-      key: "4",
+      key: uuidv4(),
       content: (
         <ProjectCard
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/budget-manager.gif"
@@ -239,7 +294,7 @@ function Projects() {
       ),
     },
     {
-      key: "5",
+      key: uuidv4(),
       content: (
         <ProjectCard
           img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/calculator-app.gif"

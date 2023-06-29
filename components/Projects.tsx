@@ -119,7 +119,7 @@ function Projects() {
             },
             {
               name: "MudBlazor",
-              icon: "/skills/mudblazor.png",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/mudblazor.png",
               url: "https://mudblazor.com/",
             },
             {

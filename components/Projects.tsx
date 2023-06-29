@@ -118,6 +118,11 @@ function Projects() {
               url: "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
             },
             {
+              name: "MudBlazor",
+              icon: "/skills/mudblazor.png",
+              url: "https://mudblazor.com/",
+            },
+            {
               name: "Entity Framework Core",
               icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/efcore.jpg",
               url: "https://learn.microsoft.com/ef/core/",
@@ -146,7 +151,7 @@ function Projects() {
           description={
             <span>
               An e-commerce website powered by{" "}
-              <code>ASP.NET</code> + <code>Blazor</code> + <code>EFCore</code> + <code>Tailwind CSS</code> + <code>SQL Server</code>{" "}
+              <code>ASP.NET</code> + <code>Blazor/MudBlazor</code> + <code>EFCore</code> + <code>Tailwind CSS</code> + <code>SQL Server</code>{" "}
               that sells products of different categories like books, movies, video games
             </span>
           }

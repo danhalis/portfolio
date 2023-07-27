@@ -29,7 +29,7 @@ function WorkExperience() {
       techStack: [
         {
           name: "Shell/Bash",
-          icon: "/skills/shell.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/shell.png",
           url: "https://www.shellscript.sh/",
         },
         {
@@ -49,7 +49,7 @@ function WorkExperience() {
         },
         {
           name: "Flask",
-          icon: "/skills/flask.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/flask.png",
           style: {
             backgroundColor: "white",
             padding: 1,
@@ -58,7 +58,7 @@ function WorkExperience() {
         },
         {
           name: "pytest",
-          icon: "/skills/pytest.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/pytest.png",
           url: "https://docs.pytest.org/",
           style: {
             backgroundColor: "white"
@@ -66,17 +66,17 @@ function WorkExperience() {
         },
         {
           name: "Selenium",
-          icon: "/skills/selenium.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/selenium.png",
           url: "https://www.selenium.dev/",
         },
         {
           name: "Sybase",
-          icon: "/skills/sybase.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/sybase.png",
           url: "https://www.sap.com/products/technology-platform/sybase-ase.html",
         },
         {
           name: "IBM Db2",
-          icon: "/skills/db2.webp",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/db2.webp",
           url: "https://www.ibm.com/products/db2",
         },
         {
@@ -86,62 +86,62 @@ function WorkExperience() {
         },
         {
           name: "Linux",
-          icon: "/skills/linux.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/linux.png",
           url: "https://www.redhat.com/en/topics/linux/what-is-linux",
         },
         {
           name: "Andrew File Systen (AFS)",
-          icon: "/skills/afs.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/afs.png",
           url: "https://www.openafs.org/",
         },
         {
           name: "AutoSys",
-          icon: "/skills/autosys.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/autosys.png",
           url: "https://www.broadcom.com/products/software/automation/autosys",
         },
         {
           name: "IBM MQ",
-          icon: "/skills/ibm-mq.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/ibm-mq.png",
           url: "https://www.ibm.com/products/mq",
         },
         {
           name: "Prometheus",
-          icon: "/skills/prometheus.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/prometheus.png",
           url: "https://prometheus.io/",
         },
         {
           name: "Grafana",
-          icon: "/skills/grafana.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/grafana.png",
           url: "https://grafana.com/",
         },
         {
           name: "Splunk",
-          icon: "/skills/splunk.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/splunk.png",
           url: "https://www.splunk.com/",
         },
         {
           name: "ServiceNow",
-          icon: "/skills/servicenow.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/servicenow.png",
           url: "https://www.servicenow.com/",
         },
         {
           name: "PagerDuty",
-          icon: "/skills/pagerduty.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/pagerduty.png",
           url: "https://www.pagerduty.com/",
         },
         {
           name: "Bitbucket",
-          icon: "/skills/bitbucket.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/bitbucket.png",
           url: "https://bitbucket.org/",
         },
         {
           name: "Jira",
-          icon: "/skills/jira.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/jira.png",
           url: "https://www.atlassian.com/software/jira",
         },
         {
           name: "Jenkins",
-          icon: "/skills/jenkins.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/jenkins.png",
           url: "https://www.jenkins.io/",
         },
       ],
@@ -168,7 +168,7 @@ function WorkExperience() {
         },
         {
           name: "Redux",
-          icon: "/skills/redux.svg",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/redux.svg",
           url: "https://playwright.dev/",
           style: {
             backgroundColor: "white",
@@ -195,42 +195,42 @@ function WorkExperience() {
         },
         {
           name: "Spring",
-          icon: "/skills/spring.svg",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/spring.svg",
           url: "https://spring.io/projects/spring-framework",
         },
         {
           name: "Ruby",
-          icon: "/skills/ruby.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/ruby.png",
           url: "https://www.ruby-lang.org/",
         },
         {
           name: "Ruby on Rails",
-          icon: "/skills/rails.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/rails.png",
           url: "https://rubyonrails.org/",
         },
         {
           name: "webpack",
-          icon: "/skills/webpack.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/webpack.png",
           url: "https://webpack.js.org/",
         },
         {
           name: "PostgreSQL",
-          icon: "/skills/postgresql.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/postgresql.png",
           url: "https://www.postgresql.org/",
         },
         {
           name: "Redis",
-          icon: "/skills/redis.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/redis.png",
           url: "https://redis.io/",
         },
         {
           name: "Sidekiq",
-          icon: "/skills/sidekiq.svg",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/sidekiq.svg",
           url: "https://sidekiq.org/",
         },
         {
           name: "Material UI (MUI)",
-          icon: "/skills/mui.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/mui.png",
           url: "https://mui.com/",
           style: {
             backgroundColor: "white"
@@ -248,27 +248,27 @@ function WorkExperience() {
         },
         {
           name: "Playwright",
-          icon: "/skills/playwright.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/playwright.png",
           url: "https://playwright.dev/",
         },
         {
           name: "GitHub",
-          icon: "/skills/github.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/github.png",
           url: "https://github.com/",
         },
         {
           name: "Linux",
-          icon: "/skills/linux.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/linux.png",
           url: "https://www.redhat.com/en/topics/linux/what-is-linux",
         },
         {
           name: "WSL",
-          icon: "/skills/wsl.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/wsl.png",
           url: "https://learn.microsoft.com/windows/wsl/about",
         },
         {
           name: "Jira",
-          icon: "/skills/jira.png",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/jira.png",
           url: "https://www.atlassian.com/software/jira",
         },
       ],

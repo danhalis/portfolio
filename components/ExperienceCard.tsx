@@ -154,6 +154,7 @@ function ExperienceCard({
               <Avatar
                 className={cn(styles.logo, "w-28 h-28", companyLogoClassName)}
                 src={companyLogo}
+                alt={companyName}
               />
             </Item>
             <Item>

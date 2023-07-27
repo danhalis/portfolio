@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import SlideShow from "./SlideShow";
 import { Tech } from "@/interfaces/Tech";
@@ -21,7 +20,7 @@ interface Experience {
 function WorkExperience() {
   const experiences: Experience[] = [
     {
-      companyLogo: "/experience/morgan-stanley.png",
+      companyLogo: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/experience/morgan-stanley.png",
       companyName: "Morgan Stanley",
       companyThemeColor: "#003986",
       title: "SRE Tech Analyst • Production Support • Programmer",
@@ -154,7 +153,7 @@ function WorkExperience() {
       ],
     },
     {
-      companyLogo: "/experience/diverst.jpg",
+      companyLogo: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/experience/diverst.jpg",
       companyName: "Diverst",
       companyThemeColor: "#7C76CE",
       title: "Full Stack Developer",

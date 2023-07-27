@@ -8,10 +8,11 @@ import HeroButton from "./HeroButton";
 interface Props {
   aboutRef: RefObject<HTMLElement>;
   skillsRef: RefObject<HTMLElement>;
+  workExperienceRef: RefObject<HTMLElement>;
   projectsRef: RefObject<HTMLElement>;
 }
 
-function Hero({ aboutRef, skillsRef, projectsRef }: Props) {
+function Hero({ aboutRef, skillsRef, workExperienceRef, projectsRef }: Props) {
   const [text, count] = useTypewriter({
     words: ["Hi, my name's Hieu", "a.k.a Dan Halis", "@danhalis"],
     loop: true,
@@ -60,6 +61,7 @@ function Hero({ aboutRef, skillsRef, projectsRef }: Props) {
           <div className="flex">
             <HeroButton sectionRef={aboutRef}>About</HeroButton>
             <HeroButton sectionRef={skillsRef}>Skills</HeroButton>
+            <HeroButton sectionRef={workExperienceRef}>Experience</HeroButton>
             <HeroButton sectionRef={projectsRef}>Projects</HeroButton>
           </div>
         </div>

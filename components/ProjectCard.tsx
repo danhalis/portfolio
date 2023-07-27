@@ -12,17 +12,13 @@ import {
 } from "@mui-treasury/components/info";
 import { useBouncyShadowStyles } from "@mui-treasury/styles/shadow/bouncy";
 import { useGalaxyInfoStyles } from "@mui-treasury/styles/info/galaxy";
+import { Tech } from "@/interfaces/Tech";
 
 interface Props {
   img: string;
   title: string;
   url: string;
-  techStack?: {
-    name: string;
-    url: string;
-    icon: string;
-    style?: React.CSSProperties;
-  }[];
+  techStack?: Tech[];
   description: React.ReactNode;
 }
 

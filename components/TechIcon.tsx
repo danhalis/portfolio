@@ -10,11 +10,13 @@ interface Props {
   style?: React.CSSProperties;
 }
 
+export const DEFAULT_TECH_ICON_SIZE = 25;
+
 function TechIcon({ icon, alt, url, style }: Props) {
   return (
     <Link href={url} target="_blank" rel="noreferrer">
       <Tooltip title={alt} arrow placement="top">
-        <Image src={icon} alt={alt} width="25" height="25" style={style} />
+        <Image src={icon} alt={alt} width={DEFAULT_TECH_ICON_SIZE} height={DEFAULT_TECH_ICON_SIZE} style={style} />
       </Tooltip>
     </Link>
   );

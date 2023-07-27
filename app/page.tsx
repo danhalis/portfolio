@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 const About = dynamic(() => import("@/components/About"), { ssr: false }); // About section needs access to client device
-const Projects = dynamic(() => import("@/components/Projects"), { ssr: false }); // About section needs access to client device
+const Projects = dynamic(() => import("@/components/Projects"), { ssr: false }); // Projects section needs access to client device
+const WorkExperience = dynamic(() => import("@/components/WorkExperience"), { ssr: false });
 // (https://github.com/vercel/next.js/discussions/14469#discussioncomment-29422)
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -14,6 +15,7 @@ export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const skillsRef = useRef<HTMLElement>(null);
+  const workExperienceRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -35,6 +37,7 @@ export default function Home() {
         <Hero
           aboutRef={aboutRef}
           skillsRef={skillsRef}
+          workExperienceRef={workExperienceRef}
           projectsRef={projectsRef}
         />
       </section>
@@ -49,6 +52,14 @@ export default function Home() {
         ref={skillsRef}
       >
         <Skills />
+      </section>
+
+      <section
+        id="projects"
+        className="lg:snap-center relative top-10 sm:top-48 md:top-0"
+        ref={workExperienceRef}
+      >
+        <WorkExperience />
       </section>
 
       <section

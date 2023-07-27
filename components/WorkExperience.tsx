@@ -302,6 +302,7 @@ function WorkExperience() {
           >
             {experiences.map((exp, index) => (
               <ExperienceCard
+                key={index}
                 companyLogo={exp.companyLogo}
                 companyLogoClassName="w-20 h-20 xl:w-28 xl:h-28"
                 companyName={exp.companyName}

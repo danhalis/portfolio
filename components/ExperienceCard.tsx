@@ -162,23 +162,21 @@ function ExperienceCard({
                 if (hiddenItemsCount > 0) {
                   console.log(hiddenItemsCount);
                   return (
-                    <>
-                      <button
-                        data-tooltip-id="techstack-tooltip"
-                        data-tooltip-html={techStack
-                          .slice(-hiddenItemsCount)
-                          .map((tech) => `<a class="hover:text-gray-500" href="${tech.url}" target="_blank">${tech.name}</a>`)
-                          .join("<br>")}
-                        className="cursor-pointer hover:underline underline-offset-4"
-                        style={{
-                          width: 25,
-                          height: 25,
-                        }}
-                        onClick={expandTechList}
-                      >
-                        +{hiddenItemsCount}
-                      </button>
-                    </>
+                    <button
+                      data-tooltip-id="techstack-tooltip"
+                      data-tooltip-html={techStack
+                        .slice(-hiddenItemsCount)
+                        .map((tech) => `<a class="hover:text-gray-500" href="${tech.url}" target="_blank">${tech.name}</a>`)
+                        .join("<br>")}
+                      className="cursor-pointer hover:underline underline-offset-4"
+                      style={{
+                        width: 25,
+                        height: 25,
+                      }}
+                      onClick={expandTechList}
+                    >
+                      +{hiddenItemsCount}
+                    </button>
                   );
                 } else {
                   console.log("expanded");

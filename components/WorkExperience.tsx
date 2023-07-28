@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ExperienceCard from "./ExperienceCard";
 import SlideShow from "./SlideShow";
 import { Tech } from "@/interfaces/Tech";
@@ -6,6 +6,8 @@ import { Box } from "@material-ui/core";
 import { Info, InfoCaption, InfoTitle } from "@mui-treasury/components/info";
 import { useGalaxyInfoStyles } from "@mui-treasury/styles/info/galaxy";
 import { Tooltip } from "react-tooltip";
+import { motion, useAnimation } from "framer-motion";
+import { useDebounce } from "use-debounce";
 
 interface Experience {
   companyLogo: string;
@@ -283,6 +285,20 @@ function WorkExperience() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [debouncedCurrentIndex] = useDebounce(currentIndex, 500);
+  const expDescAnimationControls = useAnimation();
+
+  useEffect(() => {
+    const animateExpDesc = async () => {
+      // Make experience description fade away
+      await expDescAnimationControls.start({ opacity: 0 }, { duration: 0.5 });
+      // Make experience description appear
+      expDescAnimationControls.start({ opacity: 1 }, { duration: 0.5 });
+    }
+    // Animate experience description whenever the index changes
+    animateExpDesc();
+  }, [currentIndex]);
+
   return (
     <div
       className="
@@ -322,15 +338,17 @@ function WorkExperience() {
             useStyles={useGalaxyInfoStyles}
           >
             <InfoTitle className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-light mb-1">
-              {experiences[currentIndex].title}
+              <motion.span animate={expDescAnimationControls}>{experiences[debouncedCurrentIndex].title}</motion.span>
             </InfoTitle>
-            <ul className="list-disc space-y-4 ml-5 text-lg">
-              {experiences[currentIndex].duties.map((duty, index) => (
+            <motion.ul className="list-disc space-y-4 ml-5 text-lg"
+              animate={expDescAnimationControls}
+            >
+              {experiences[debouncedCurrentIndex].duties.map((duty, index) => (
                 <li key={index}>
                   <InfoCaption>{duty}</InfoCaption>
                 </li>
               ))}
-            </ul>
+            </motion.ul>
           </Info>
         </Box>
       </article>

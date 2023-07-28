@@ -161,12 +161,19 @@ function ExperienceCard({
               renderTruncator={({ hiddenItemsCount }) => {
                 if (hiddenItemsCount > 0) {
                   return (
-                    <button
-                      className="cursor-pointer hover:underline underline-offset-4"
-                      onClick={expandTechList}
-                    >
-                      +{hiddenItemsCount}
-                    </button>
+                    <>
+                      <button
+                        data-tooltip-id="techstack-tooltip"
+                        data-tooltip-html={techStack
+                          .slice(-hiddenItemsCount)
+                          .map((tech) => `<a class="hover:text-gray-500" href="${tech.url}" target="_blank">${tech.name}</a>`)
+                          .join("<br>")}
+                        className="cursor-pointer hover:underline underline-offset-4"
+                        onClick={expandTechList}
+                      >
+                        +{hiddenItemsCount}
+                      </button>
+                    </>
                   );
                 } else {
                   return (
@@ -181,7 +188,7 @@ function ExperienceCard({
               }}
               style={{
                 gap: gapBetweenTechIcons,
-                maxHeight: techListExpanded ? "none" : 30,
+                maxHeight: techListExpanded ? "none" : 25,
               }}
             >
               {techStack.map((tech, index) => (

@@ -5,6 +5,7 @@ import { Tech } from "@/interfaces/Tech";
 import { Box } from "@material-ui/core";
 import { Info, InfoCaption, InfoTitle } from "@mui-treasury/components/info";
 import { useGalaxyInfoStyles } from "@mui-treasury/styles/info/galaxy";
+import { Tooltip } from "react-tooltip";
 
 interface Experience {
   companyLogo: string;
@@ -292,6 +293,7 @@ function WorkExperience() {
       <h3 className="section-title">Work Experience</h3>
 
       <article className="grid grid-cols-3 gap-8">
+        <Tooltip id="techstack-tooltip" className="z-10 text-sm" clickable place="right"/>
         {/* Putting SlideShow in another div to prevent its height from growing */}
         <div className="col-span-1">
           <SlideShow

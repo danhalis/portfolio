@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Row, Item } from "@mui-treasury/components/flex";
 import Avatar from "@material-ui/core/Avatar";
 import { Tech } from "@/interfaces/Tech";
 import TechIcon from "./TechIcon";
 import { Box } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
-import cx from "clsx";
 import Color from "color";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +12,7 @@ import { TruncatedList } from "react-truncate-list";
 import "react-truncate-list/dist/styles.css";
 
 interface Props {
+  className?: string;
   companyLogo: string;
   companyName: string;
   companyThemeColor: string;
@@ -104,6 +104,7 @@ const useStyles = makeStyles(({ palette }) => ({
 }));
 
 function ExperienceCard({
+  className,
   companyLogo,
   companyName,
   companyThemeColor,
@@ -118,31 +119,12 @@ function ExperienceCard({
   const gapBetweenTechIcons = 12;
   const techListPadding = 8;
 
-  const [techListParentWidth, setTechListParentWidth] = useState(0);
-  const truncatedTechListWrapper = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (truncatedTechListWrapper.current) {
-        setTechListParentWidth(
-          truncatedTechListWrapper.current.getBoundingClientRect().width
-        );
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const [techListExpanded, setTechListExpanded] = React.useState(false);
   const expandTechList = () => setTechListExpanded(true);
   const collapseTechList = () => setTechListExpanded(false);
 
   return (
-    <Box className={cx(styles.root, styles.color, "pt-10")}>
+    <Box className={cn(styles.root, styles.color, "pt-10", className)}>
       <Box className={styles.content} p={2}>
         <Box className="space-y-2" position={"relative"} zIndex={1}>
           <Row
@@ -173,49 +155,46 @@ function ExperienceCard({
             </Item>
           </Row>
           <Row padding={`${techListPadding}px`} alignItems={"center"}>
-            <div className="w-full" ref={truncatedTechListWrapper}>
-              <TruncatedList
-                className={`flex flex-wrap ${
-                  techListExpanded ? "max-h-none" : "max-h-[30px]"
-                }`}
-                alwaysShowTruncator={techListExpanded}
-                renderTruncator={({ hiddenItemsCount }) => {
-                  if (hiddenItemsCount > 0) {
-                    return (
-                      <button
-                        className="cursor-pointer hover:underline underline-offset-4"
-                        onClick={expandTechList}
-                      >
-                        +{hiddenItemsCount}
-                      </button>
-                    );
-                  } else {
-                    return (
-                      <button
-                        className="cursor-pointer hover:underline underline-offset-4"
-                        onClick={collapseTechList}
-                      >
-                        less
-                      </button>
-                    );
-                  }
-                }}
-                style={{
-                  maxWidth: techListParentWidth - gapBetweenTechIcons,
-                  gap: gapBetweenTechIcons,
-                }}
-              >
-                {techStack.map((tech, index) => (
-                  <TechIcon
-                    key={index}
-                    icon={tech.icon}
-                    alt={tech.name}
-                    url={tech.url}
-                    style={tech.style}
-                  />
-                ))}
-              </TruncatedList>
-            </div>
+            <TruncatedList
+              className={`flex flex-wrap ${
+                techListExpanded ? "max-h-none" : "max-h-[30px]"
+              }`}
+              alwaysShowTruncator={techListExpanded}
+              renderTruncator={({ hiddenItemsCount }) => {
+                if (hiddenItemsCount > 0) {
+                  return (
+                    <button
+                      className="cursor-pointer hover:underline underline-offset-4"
+                      onClick={expandTechList}
+                    >
+                      +{hiddenItemsCount}
+                    </button>
+                  );
+                } else {
+                  return (
+                    <button
+                      className="cursor-pointer hover:underline underline-offset-4"
+                      onClick={collapseTechList}
+                    >
+                      less
+                    </button>
+                  );
+                }
+              }}
+              style={{
+                gap: gapBetweenTechIcons,
+              }}
+            >
+              {techStack.map((tech, index) => (
+                <TechIcon
+                  key={index}
+                  icon={tech.icon}
+                  alt={tech.name}
+                  url={tech.url}
+                  style={tech.style}
+                />
+              ))}
+            </TruncatedList>
           </Row>
           <Row className="pb-6">
             {duties.length > 0 && (

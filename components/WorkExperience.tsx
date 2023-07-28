@@ -162,12 +162,12 @@ function WorkExperience() {
       techStack: [
         {
           name: "React.js",
-          icon: "https://reactnative.dev/img/header_logo.svg",
+          icon: "/skills/react.png",
           url: "https://reactjs.org/",
         },
         {
           name: "Redux",
-          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/redux.svg",
+          icon: "/skills/redux.png",
           url: "https://playwright.dev/",
           style: {
             backgroundColor: "white",
@@ -194,7 +194,7 @@ function WorkExperience() {
         },
         {
           name: "Spring",
-          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/spring.svg",
+          icon: "/skills/spring.png",
           url: "https://spring.io/projects/spring-framework",
         },
         {
@@ -209,12 +209,12 @@ function WorkExperience() {
         },
         {
           name: "webpack",
-          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/webpack.png",
+          icon: "/skills/webpack.png",
           url: "https://webpack.js.org/",
         },
         {
           name: "PostgreSQL",
-          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/postgresql.png",
+          icon: "/skills/postgresql.png",
           url: "https://www.postgresql.org/",
         },
         {
@@ -224,7 +224,7 @@ function WorkExperience() {
         },
         {
           name: "Sidekiq",
-          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/sidekiq.svg",
+          icon: "/skills/sidekiq.png",
           url: "https://sidekiq.org/",
         },
         {

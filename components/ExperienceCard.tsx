@@ -188,7 +188,7 @@ function ExperienceCard({
               }}
               style={{
                 gap: gapBetweenTechIcons,
-                width: "90%",
+                width: "100%",
                 maxHeight: techListExpanded ? "none" : 25,
               }}
             >

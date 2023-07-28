@@ -156,10 +156,8 @@ function ExperienceCard({
           </Row>
           <Row padding={`${techListPadding}px`} alignItems={"center"}>
             <TruncatedList
-              className={`flex flex-wrap ${
-                techListExpanded ? "max-h-none" : "max-h-[30px]"
-              }`}
-              alwaysShowTruncator={techListExpanded}
+              className="flex flex-wrap"
+              alwaysShowTruncator
               renderTruncator={({ hiddenItemsCount }) => {
                 if (hiddenItemsCount > 0) {
                   return (
@@ -183,6 +181,7 @@ function ExperienceCard({
               }}
               style={{
                 gap: gapBetweenTechIcons,
+                maxHeight: techListExpanded ? "none" : 30,
               }}
             >
               {techStack.map((tech, index) => (

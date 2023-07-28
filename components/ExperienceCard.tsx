@@ -160,6 +160,7 @@ function ExperienceCard({
               alwaysShowTruncator
               renderTruncator={({ hiddenItemsCount }) => {
                 if (hiddenItemsCount > 0) {
+                  console.log(hiddenItemsCount);
                   return (
                     <>
                       <button
@@ -180,6 +181,7 @@ function ExperienceCard({
                     </>
                   );
                 } else {
+                  console.log("expanded");
                   return (
                     <button
                       className="cursor-pointer hover:underline underline-offset-4"

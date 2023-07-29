@@ -10,11 +10,13 @@ import { cn } from "@/lib/utils";
 
 import { TruncatedList } from "react-truncate-list";
 import "react-truncate-list/dist/styles.css";
+import Link from "next/link";
 
 interface Props {
   className?: string;
   companyLogo: string;
   companyName: string;
+  companyWebsite?: string;
   companyThemeColor: string;
   title?: string;
   techStack?: Tech[];
@@ -106,14 +108,15 @@ const useStyles = makeStyles(({ palette }) => ({
 function ExperienceCard({
   className,
   companyLogo,
+  companyLogoClassName,
   companyName,
+  companyWebsite,
   companyThemeColor,
   title,
   techStack = [],
   startDate,
   endDate = "Now",
   duties = [],
-  companyLogoClassName,
 }: Props) {
   const styles = useStyles({ color: companyThemeColor });
   const gapBetweenTechIcons = 12;
@@ -133,11 +136,20 @@ function ExperienceCard({
             gap={2}
           >
             <Item>
+              <Link href={companyWebsite ?? "#"} target="_blank">
               <Avatar
-                className={cn(styles.logo, "w-28 h-28", companyLogoClassName)}
+                className={cn(
+                  styles.logo,
+                  `w-28 h-28
+                  hover:shadow-[0_0_12px_5px_rgba(255,255,255,0.3)]
+                  hover:cursor-pointer
+                  `,
+                  companyLogoClassName
+                )}
                 src={companyLogo}
                 alt={companyName}
               />
+              </Link>
             </Item>
             <Item>
               {title && (
@@ -154,7 +166,7 @@ function ExperienceCard({
               </p>
             </Item>
           </Row>
-          <Row padding={`${techListPadding}px`} alignItems={"center"}>
+          <Row padding={`${techListPadding}px`} paddingTop="10px" alignItems={"center"}>
             <TruncatedList
               className="flex flex-wrap"
               alwaysShowTruncator
@@ -166,8 +178,12 @@ function ExperienceCard({
                       data-tooltip-id="techstack-tooltip"
                       data-tooltip-html={techStack
                         .slice(-hiddenItemsCount)
-                        .map((tech) => `<a class="hover:text-gray-500" href="${tech.url}" target="_blank">${tech.name}</a>`)
-                        .join("<br>")}
+                        .map((tech) => `
+                          <div class="flex">
+                            <a class="w-full mb-1 hover:text-gray-500 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]" href="${tech.url}" target="_blank">${tech.name}</a>
+                          </div>
+                        `)
+                        .join("")}
                       className="cursor-pointer hover:underline underline-offset-4"
                       style={{
                         width: 25,

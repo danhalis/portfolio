@@ -12,6 +12,7 @@ import { useDebounce } from "use-debounce";
 interface Experience {
   companyLogo: string;
   companyName: string;
+  companyWebsite: string;
   companyThemeColor: string;
   title: string;
   techStack?: Tech[];
@@ -25,6 +26,7 @@ function WorkExperience() {
     {
       companyLogo: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/experience/morgan-stanley.png",
       companyName: "Morgan Stanley",
+      companyWebsite: "https://www.morganstanley.com/",
       companyThemeColor: "#003986",
       title: "SRE Tech Analyst • Production Support • Programmer",
       startDate: "Jun 2022",
@@ -158,6 +160,7 @@ function WorkExperience() {
     {
       companyLogo: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/experience/diverst.jpg",
       companyName: "Diverst",
+      companyWebsite: "https://diverst.com/",
       companyThemeColor: "#7C76CE",
       title: "Full Stack Developer",
       startDate: "Jan 2022",
@@ -323,6 +326,7 @@ function WorkExperience() {
                 companyLogo={exp.companyLogo}
                 companyLogoClassName="w-20 h-20 xl:w-28 xl:h-28"
                 companyName={exp.companyName}
+                companyWebsite={exp.companyWebsite}
                 companyThemeColor={exp.companyThemeColor}
                 startDate={exp.startDate}
                 endDate={exp.endDate}

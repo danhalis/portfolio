@@ -16,7 +16,7 @@ function TechIcon({ icon, alt, url, style }: Props) {
   return (
     <Link href={url} target="_blank" rel="noreferrer">
       <Tooltip title={alt} arrow placement="top">
-        <Image src={icon} alt={alt} width={DEFAULT_TECH_ICON_SIZE} height={DEFAULT_TECH_ICON_SIZE} style={style} />
+        <Image className="hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]" src={icon} alt={alt} width={DEFAULT_TECH_ICON_SIZE} height={DEFAULT_TECH_ICON_SIZE} style={style} />
       </Tooltip>
     </Link>
   );

@@ -64,15 +64,16 @@ function Header() {
       "
         >
           <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-          <p
+          <a
+            href="mailto:daoleduchieu30082001@gmail.com"
             className="
-          uppercase
-          text-sm text-gray-400
-          hidden md:inline-flex
-        "
+            uppercase
+            text-sm text-gray-400
+            hidden md:inline-flex
+            "
           >
             Contact Me
-          </p>
+          </a>
         </div>
       </motion.div>
     </header>

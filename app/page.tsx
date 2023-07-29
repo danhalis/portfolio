@@ -28,7 +28,9 @@ export default function Home() {
       h-screen z-0
       text-white
       lg:snap-y lg:snap-mandatory
-      overflow-scroll
+      overflow-y-scroll
+      scrollbar scrollbar-track-gray-400/20
+      scrollbar-thumb-cyan-700
       "
     >
       <Header />

@@ -325,6 +325,45 @@ function Projects() {
         />
       ),
     },
+    {
+      key: uuidv4(),
+      content: (
+        <ProjectCard
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/github-user-finder.gif"
+          title="GitHub User Finder"
+          url="https://github-user-finder.danhalis.repl.co/"
+          techStack={[
+            {
+              name: "HTML",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/html5.png",
+              url: "https://developer.mozilla.org/docs/Web/HTML",
+            },
+            {
+              name: "CSS",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/css.png",
+              url: "https://developer.mozilla.org/docs/Web/CSS",
+            },
+            {
+              name: "jQuery",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/jquery.png",
+              url: "https://jquery.com/",
+            },
+            {
+              name: "Bootstrap",
+              icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/bootstrap.png",
+              url: "https://getbootstrap.com/",
+            },
+          ]}
+          description={
+            <span>
+              A web app powered by <code>HTML</code> +{" "}
+              <code>CSS</code> + <code>jQuery</code> + <code>Bootstrap</code> +{" "}
+              that finds GitHub user profile by username.
+            </span>
+          }
+        />
+      ),
+    },
   ].map((slide, index) => {
     return {
       ...slide,

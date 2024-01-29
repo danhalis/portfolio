@@ -103,7 +103,7 @@ function Projects() {
       key: uuidv4(),
       content: (
         <ProjectCard
-          img="projects/ecommerce-webapp.gif"
+          img="https://raw.githubusercontent.com/danhalis/portfolio/master/public/projects/ecommerce-webapp.gif"
           title="E-Commerce Web App"
           url="https://github.com/danhalis/E-Commerce_WebApp"
           techStack={[

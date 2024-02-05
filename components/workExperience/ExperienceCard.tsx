@@ -2,13 +2,14 @@ import React from "react";
 import { Row, Item } from "@mui-treasury/components/flex";
 import Avatar from "@material-ui/core/Avatar";
 import { Tech } from "@/interfaces/Tech";
-import TechIcon from "./TechIcon";
+import TechIcon from "../TechIcon";
 import { Box } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
 import Color from "color";
 import { cn } from "@/lib/utils";
 
-import { TruncatedList } from "react-truncate-list";
+import dynamic from "next/dynamic";
+const TruncateListWrapper = dynamic(() => import("@/components/shared/TruncateListWrapper"), { ssr: false, loading: () => <div>Loading</div> });
 import "react-truncate-list/dist/styles.css";
 import Link from "next/link";
 
@@ -166,8 +167,8 @@ function ExperienceCard({
               </p>
             </Item>
           </Row>
-          <Row padding={`${techListPadding}px`} paddingTop="10px" alignItems={"center"}>
-            <TruncatedList
+          <div className="items-center" style={{ padding: `10px ${techListPadding}px ${techListPadding}px ${techListPadding}px`, }}>
+            <TruncateListWrapper
               className="flex flex-wrap"
               alwaysShowTruncator
               renderTruncator={({ hiddenItemsCount }) => {
@@ -223,8 +224,8 @@ function ExperienceCard({
                   style={tech.style}
                 />
               ))}
-            </TruncatedList>
-          </Row>
+            </TruncateListWrapper>
+          </div>
           <Row className="pb-6">
             {duties.length > 0 && (
               <ul className="list-disc space-y-4 ml-5 text-lg">

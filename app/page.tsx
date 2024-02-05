@@ -1,14 +1,13 @@
 "use client";
 
-import About from "@/components/about/About";
-import Projects from "@/components/Projects";
-import WorkExperience from "@/components/WorkExperience";
-
-// (https://github.com/vercel/next.js/discussions/14469#discussioncomment-29422)
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/about/About";
 import Skills from "@/components/Skills";
-import { useEffect, useRef, RefObject, useState } from "react";
+import WorkExperience from "@/components/workExperience/WorkExperience";
+import Projects from "@/components/projects/Projects";
+
+import { useEffect, useRef, RefObject } from "react";
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
@@ -21,21 +20,20 @@ export default function Home() {
     hero: heroRef,
     about: aboutRef,
     skills: skillsRef,
-    experience: workExperienceRef,
-    projects: projectsRef
   }
 
-  const [path] = useState(window.location.href);
-
   useEffect(() => {
-    console.log(path)
-    const currentUrl = path;
+    const currentUrl = window.location.href;
     const splitedUrl = currentUrl.split("/#");
     const elementId = splitedUrl[splitedUrl.length - 1];
-    refs[elementId]?.current?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }, [path]);
+
+    console.log(refs[elementId]);
+    if (refs[elementId]) {
+      refs[elementId].current?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, []);
 
   return (
     <div
@@ -77,7 +75,16 @@ export default function Home() {
         className="lg:snap-center relative top-10 sm:top-48 md:top-0"
         ref={workExperienceRef}
       >
-        <WorkExperience />
+        <WorkExperience onMount={() => {
+          const currentUrl = window.location.href;
+          const splitedUrl = currentUrl.split("/#");
+          const elementId = splitedUrl[splitedUrl.length - 1];
+          if (elementId == "experience") {
+            workExperienceRef.current?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        }} />
       </section>
 
       <section

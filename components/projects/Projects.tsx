@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Carousel from "react-spring-3d-carousel";
+import dynamic from "next/dynamic";
+const CarouselWrapper = dynamic(() => import("@/components/projects/ProjectCarousel"), { ssr: false, loading: () => <div>Loading</div> });
 import { config } from "react-spring";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../ProjectCard";
 import { v4 as uuidv4 } from "uuid";
 
 function Projects() {
@@ -414,7 +415,7 @@ function Projects() {
           }
         }}
       >
-        <Carousel
+        <CarouselWrapper
           showNavigation={false}
           slides={slides}
           goToSlide={selectedSlide}

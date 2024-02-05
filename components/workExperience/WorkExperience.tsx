@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ExperienceCard from "./ExperienceCard";
-import SlideShow from "./SlideShow";
+import SlideShow from "../SlideShow";
 import { Tech } from "@/interfaces/Tech";
 import { Box } from "@material-ui/core";
 import { Info, InfoCaption, InfoTitle } from "@mui-treasury/components/info";
@@ -21,7 +21,13 @@ interface Experience {
   duties: string[];
 }
 
-function WorkExperience() {
+interface Props {
+  onMount?: () => void;
+}
+
+function WorkExperience({
+  onMount = () => {}
+}: Props) {
   const experiences: Experience[] = [
     {
       companyLogo: "/experience/bnpparibas.jpg",
@@ -357,6 +363,7 @@ function WorkExperience() {
   const expDescAnimationControls = useAnimation();
 
   useEffect(() => {
+    onMount();
     const animateExpDesc = async () => {
       // Make experience description fade away
       await expDescAnimationControls.start({ opacity: 0 }, { duration: 0.5 });

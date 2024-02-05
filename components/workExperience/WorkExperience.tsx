@@ -35,7 +35,7 @@ function WorkExperience({
       companyWebsite: "https://cib.bnpparibas/",
       companyThemeColor: "#008859",
       title: "Developer • Production Support Analyst (Level 4)",
-      startDate: "Jun 2022",
+      startDate: "Aug 2023",
       techStack: [
         {
           name: "JavaScript",
@@ -101,6 +101,7 @@ function WorkExperience({
       companyThemeColor: "#003986",
       title: "SRE Tech Analyst • Production Support • Programmer",
       startDate: "Jun 2022",
+      endDate: "May 2023",
       techStack: [
         {
           name: "Shell/Bash",

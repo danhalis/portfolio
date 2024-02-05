@@ -6,7 +6,6 @@ import About from "@/components/about/About";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/workExperience/WorkExperience";
 import Projects from "@/components/projects/Projects";
-
 import { useEffect, useRef, RefObject } from "react";
 
 export default function Home() {
@@ -20,14 +19,14 @@ export default function Home() {
     hero: heroRef,
     about: aboutRef,
     skills: skillsRef,
+    experience: workExperienceRef,
+    projects: projectsRef
   }
 
   useEffect(() => {
-    const currentUrl = window.location.href;
-    const splitedUrl = currentUrl.split("/#");
-    const elementId = splitedUrl[splitedUrl.length - 1];
+    const currentHash = window.location.hash;
+    const elementId = currentHash.slice(1);
 
-    console.log(refs[elementId]);
     if (refs[elementId]) {
       refs[elementId].current?.scrollIntoView({
         behavior: "smooth",

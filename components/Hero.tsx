@@ -18,6 +18,7 @@ function Hero({ aboutRef, skillsRef, workExperienceRef, projectsRef }: Props) {
     loop: true,
     delaySpeed: 2000,
   });
+
   return (
     <div
       className="
@@ -59,10 +60,10 @@ function Hero({ aboutRef, skillsRef, workExperienceRef, projectsRef }: Props) {
             <Cursor />
           </h1>
           <div className="flex">
-            <HeroButton href="/#about" sectionRef={aboutRef}>About</HeroButton>
-            <HeroButton href="/#skills" sectionRef={skillsRef}>Skills</HeroButton>
-            <HeroButton href="/#experience" sectionRef={workExperienceRef}>Experience</HeroButton>
-            <HeroButton href="/#projects" sectionRef={projectsRef}>Projects</HeroButton>
+            <HeroButton href="/portfolio#about" sectionRef={aboutRef}>About</HeroButton>
+            <HeroButton href="/portfolio#skills" sectionRef={skillsRef}>Skills</HeroButton>
+            <HeroButton href="/portfolio#experience" sectionRef={workExperienceRef}>Experience</HeroButton>
+            <HeroButton href="/portfolio#projects" sectionRef={projectsRef}>Projects</HeroButton>
           </div>
         </div>
       </motion.div>

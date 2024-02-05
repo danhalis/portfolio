@@ -1,15 +1,14 @@
 "use client";
 
-import dynamic from "next/dynamic";
-const About = dynamic(() => import("@/components/About"), { ssr: false }); // About section needs access to client device
-const Projects = dynamic(() => import("@/components/Projects"), { ssr: false }); // Projects section needs access to client device
-const WorkExperience = dynamic(() => import("@/components/WorkExperience"), { ssr: false });
+import About from "@/components/about/About";
+import Projects from "@/components/Projects";
+import WorkExperience from "@/components/WorkExperience";
+
 // (https://github.com/vercel/next.js/discussions/14469#discussioncomment-29422)
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
-
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, RefObject, useState } from "react";
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
@@ -18,9 +17,25 @@ export default function Home() {
   const workExperienceRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
 
+  const refs: { [id: string] : RefObject<HTMLElement>; } = {
+    hero: heroRef,
+    about: aboutRef,
+    skills: skillsRef,
+    experience: workExperienceRef,
+    projects: projectsRef
+  }
+
+  const [path] = useState(window.location.href);
+
   useEffect(() => {
-    heroRef.current?.scrollIntoView();
-  }, []);
+    console.log(path)
+    const currentUrl = path;
+    const splitedUrl = currentUrl.split("/#");
+    const elementId = splitedUrl[splitedUrl.length - 1];
+    refs[elementId]?.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [path]);
 
   return (
     <div
@@ -31,6 +46,7 @@ export default function Home() {
       overflow-y-scroll
       scrollbar scrollbar-track-gray-400/20
       scrollbar-thumb-cyan-700
+      scroll-smooth
       "
     >
       <Header />
@@ -57,7 +73,7 @@ export default function Home() {
       </section>
 
       <section
-        id="projects"
+        id="experience"
         className="lg:snap-center relative top-10 sm:top-48 md:top-0"
         ref={workExperienceRef}
       >

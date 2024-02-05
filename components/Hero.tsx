@@ -59,10 +59,10 @@ function Hero({ aboutRef, skillsRef, workExperienceRef, projectsRef }: Props) {
             <Cursor />
           </h1>
           <div className="flex">
-            <HeroButton sectionRef={aboutRef}>About</HeroButton>
-            <HeroButton sectionRef={skillsRef}>Skills</HeroButton>
-            <HeroButton sectionRef={workExperienceRef}>Experience</HeroButton>
-            <HeroButton sectionRef={projectsRef}>Projects</HeroButton>
+            <HeroButton href="/#about" sectionRef={aboutRef}>About</HeroButton>
+            <HeroButton href="/#skills" sectionRef={skillsRef}>Skills</HeroButton>
+            <HeroButton href="/#experience" sectionRef={workExperienceRef}>Experience</HeroButton>
+            <HeroButton href="/#projects" sectionRef={projectsRef}>Projects</HeroButton>
           </div>
         </div>
       </motion.div>

@@ -1,10 +1,12 @@
+import Link from "next/link";
 import React from "react";
 
 interface Props {
   sectionRef: React.RefObject<HTMLElement>;
+  href: string;
   children: React.ReactNode;
 }
-function HeroButton({ sectionRef, children }: Props) {
+function HeroButton({ sectionRef, href, children }: Props) {
   return (
     <button
       className="hero-btn"
@@ -12,6 +14,7 @@ function HeroButton({ sectionRef, children }: Props) {
         sectionRef.current?.scrollIntoView({
           behavior: "smooth",
         });
+        window.location.href = href;
       }}
     >
       {children}

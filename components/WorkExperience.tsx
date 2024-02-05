@@ -24,6 +24,71 @@ interface Experience {
 function WorkExperience() {
   const experiences: Experience[] = [
     {
+      companyLogo: "/experience/bnpparibas.jpg",
+      companyName: "BNP Paribas CIB",
+      companyWebsite: "https://cib.bnpparibas/",
+      companyThemeColor: "#008859",
+      title: "Developer • Production Support Analyst (Level 4)",
+      startDate: "Jun 2022",
+      techStack: [
+        {
+          name: "JavaScript",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+          url: "https://developer.mozilla.org/docs/Web/JavaScript",
+        },
+        {
+          name: "Python",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/python.png",
+          url: "https://www.python.org/",
+        },
+        {
+          name: "Flask",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/flask.png",
+          style: {
+            backgroundColor: "white",
+            padding: 1,
+          },
+          url: "https://flask.palletsprojects.com/en/2.3.x/",
+        },
+        {
+          name: "Windows",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/windows.png",
+          url: "https://www.microsoft.com/software-download/windows10",
+        },
+        {
+          name: "Linux",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/linux.png",
+          url: "https://www.redhat.com/en/topics/linux/what-is-linux",
+        },
+        {
+          name: "AutoSys",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/autosys.png",
+          url: "https://www.broadcom.com/products/software/automation/autosys",
+        },
+        {
+          name: "ServiceNow",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/servicenow.png",
+          url: "https://www.servicenow.com/",
+        },
+        {
+          name: "Bitbucket",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/bitbucket.png",
+          url: "https://bitbucket.org/",
+        },
+        {
+          name: "Jenkins",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/jenkins.png",
+          url: "https://www.jenkins.io/",
+        },
+      ],
+      duties: [
+        "Code and design fullstack apps as an individual contributor or a part of a development team as per the requirement and feasibility",
+        "Create productivity tools that facilitates alert monitoring",
+        "Manage application/infrustructure alerts for resolution and escalate for investigation",
+        "Maintain documentation about alerts and process guidelines for resolution",
+      ],
+    },
+    {
       companyLogo: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/experience/morgan-stanley.png",
       companyName: "Morgan Stanley",
       companyWebsite: "https://www.morganstanley.com/",

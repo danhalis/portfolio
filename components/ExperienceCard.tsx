@@ -172,7 +172,6 @@ function ExperienceCard({
               alwaysShowTruncator
               renderTruncator={({ hiddenItemsCount }) => {
                 if (hiddenItemsCount > 0) {
-                  console.log(hiddenItemsCount);
                   return (
                     <button
                       data-tooltip-id="techstack-tooltip"
@@ -195,7 +194,6 @@ function ExperienceCard({
                     </button>
                   );
                 } else {
-                  console.log("expanded");
                   return (
                     <button
                       className="cursor-pointer hover:underline underline-offset-4"

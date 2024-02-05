@@ -55,7 +55,6 @@ export default function ProjectCard({
     const hRatio = windowH / h;
 
     if (w > h) {
-      console.log("ok");
       // if (h * wRatio > windowH) setImageHeight(`h-[${windowH}px]`);
       if (h * wRatio > windowH) setImageHeight(`h-full`);
       // else setImageWidth(`w-[${windowW}px]`);
@@ -162,7 +161,6 @@ export default function ProjectCard({
           w-full h-full
           outline-none"
           onClick={(e) => {
-            console.log(e.target);
             if (e.target != modalContentRef.current) return;
             handleClose();
           }}

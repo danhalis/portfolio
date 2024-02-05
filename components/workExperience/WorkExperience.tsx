@@ -30,7 +30,7 @@ function WorkExperience({
 }: Props) {
   const experiences: Experience[] = [
     {
-      companyLogo: "/experience/bnpparibas.jpg",
+      companyLogo: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/experience/bnpparibas.jpg",
       companyName: "BNP Paribas CIB",
       companyWebsite: "https://cib.bnpparibas/",
       companyThemeColor: "#008859",

@@ -34,9 +34,19 @@ function WorkExperience({
       companyName: "BNP Paribas CIB",
       companyWebsite: "https://cib.bnpparibas/",
       companyThemeColor: "#008859",
-      title: "Developer • Production Support Analyst (Level 4)",
+      title: "Full Stack Developer • Production Support Analyst (Level 4)",
       startDate: "Aug 2023",
       techStack: [
+        {
+          name: "Angular",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/angular.svg",
+          url: "https://angular.io/",
+        },
+        {
+          name: "React.js",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/react.png",
+          url: "https://reactjs.org/",
+        },
         {
           name: "JavaScript",
           icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
@@ -55,6 +65,11 @@ function WorkExperience({
             padding: 1,
           },
           url: "https://flask.palletsprojects.com/en/2.3.x/",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://raw.githubusercontent.com/danhalis/portfolio/master/public/skills/postgresql.png",
+          url: "https://www.postgresql.org/",
         },
         {
           name: "Windows",
@@ -88,10 +103,10 @@ function WorkExperience({
         },
       ],
       duties: [
-        "Code and design fullstack apps as an individual contributor or a part of a development team as per the requirement and feasibility",
-        "Create productivity tools that facilitates alert monitoring",
-        "Manage application/infrustructure alerts for resolution and escalate for investigation",
-        "Maintain documentation about alerts and process guidelines for resolution",
+        "Implement automation tools and web applications that aim to assist daily production monitoring",
+        "Design data models and backend architecture that respond well to business logic and its scalability; implement REST API for usage on frontend",
+        "Build frontend web applications that utilize backend API and other third-party APIs like ServiceNow Table API",
+        "Manage application/infrastructure alerts for resolution and escalate to multiple internal teams for investigation",
       ],
     },
     {
@@ -350,9 +365,8 @@ function WorkExperience({
         },
       ],
       duties: [
-        "Programming and code review",
-        "Complete user stories and fix bugs in backlog",
         "Implement new app features for both frontend and backend (adding new app UI components, implementing/work with REST APIs, update database schemas)",
+        "Complete user stories and fix bugs in backlog",
         "Write End-to-End UI tests for QA purposes",
         "Attend team daily and retrospective meetings",
       ],
